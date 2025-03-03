@@ -8,7 +8,7 @@ import com.example.mealzapp.model.response.MealResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MealsCategoriesViewModel (private val repository: MealsRepository = MealsRepository()) : ViewModel() {
+class MealsCategoriesViewModel (private val repository: MealsRepository = MealsRepository.getInstance()) : ViewModel() {
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
